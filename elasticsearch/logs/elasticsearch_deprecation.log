@@ -1,0 +1,5 @@
+[2017-11-17T17:21:45,634][WARN ][o.e.d.i.m.UidFieldMapper ] Fielddata access on the _uid field is deprecated, use _id instead
+[2017-11-17T17:21:45,972][WARN ][o.e.d.i.m.UidFieldMapper ] Fielddata access on the _uid field is deprecated, use _id instead
+[2017-11-17T17:21:46,735][WARN ][o.e.d.i.m.UidFieldMapper ] Fielddata access on the _uid field is deprecated, use _id instead
+[2017-11-17T17:22:20,007][WARN ][o.e.d.c.ParseField       ] Deprecated field [inline] used, expected [source] instead
+[2017-11-17T17:22:20,007][WARN ][o.e.d.c.ParseField       ] Deprecated field [inline] used, expected [source] instead
