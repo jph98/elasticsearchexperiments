@@ -22,9 +22,6 @@ def display_articles(pages):
 
         if DEBUG: print "ES Document: " + str(a)
 
-res = es.count(index='articles', doc_type='article', body={ "query": { "match_all" : { } } })
-print "Found: " + str(res['count']) + ' articles\n'
-
 doc = {
     'query': {
         'match_all' : {}
