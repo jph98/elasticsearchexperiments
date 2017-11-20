@@ -5,9 +5,7 @@ import requests
 from elasticsearch import Elasticsearch
 from textblob import TextBlob
 
-# See http://textblob.readthedocs.io/en/dev/quickstart.html#quickstart
-# See http://dataconomy.com/2016/12/use-elasticsearch-text-mining%E2%80%8A-%E2%80%8Apart-1/
-# Uses NLTK under the hood
+# See http://dataconomy.com/2016/12/use-elasticsearch-nlp-text-mining
 #
 # Some things we can do:
 # - Basic sentiment using
@@ -15,6 +13,11 @@ from textblob import TextBlob
 # - Text Classification (run a MLTQ, aggregate hits by score) -
 #   classify an article in terms of a category or sector (hairdresser, baker etc...)
 #   More accurate - train an SVM model or use Naiive Bayes
+# - Language Detection (with plugin)
+#
+# Textblob can perform a lot of different analysis using NLTK
+# http://textblob.readthedocs.io/en/dev/quickstart.html#quickstart
+# 
 def display_sentiment(pages):
     for p in pages:
         a = p["_source"]
