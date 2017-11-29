@@ -9,8 +9,8 @@ from elasticsearch import Elasticsearch
 # Example: https://github.com/ernestorx/es-swapi-test/blob/master/ES%20notebook.ipynb
 
 settings = json.load(open('settings.json'))
-es = Elasticsearch([{'host': settings.hostname, 'port': settings.port}])
-
+print 'Using ' + settings['hostname'] + ' ' + str(settings['port'])
+es = Elasticsearch([{'host': settings['hostname'], 'port': settings['port']}])
 
 data = json.load(open('articles.json'))
 

@@ -25,7 +25,8 @@ def display_sentiment(pages):
         print blob.sentiment
 
 settings = json.load(open('settings.json'))
-es = Elasticsearch([{'host': settings.hostname, 'port': settings.port}])
+print 'Using ' + settings['hostname'] + ' ' + str(settings['port'])
+es = Elasticsearch([{'host': settings['hostname'], 'port': settings['port']}])
 
 doc = {
     'query': {

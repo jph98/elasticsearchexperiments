@@ -11,7 +11,8 @@ from elasticsearch import Elasticsearch
 DEBUG = False
 
 settings = json.load(open('settings.json'))
-es = Elasticsearch([{'host': settings.hostname, 'port': settings.port}])
+print 'Using ' + settings['hostname'] + ' ' + str(settings['port'])
+es = Elasticsearch([{'host': settings['hostname'], 'port': settings['port']}])
 
 def display_articles(pages):
     for a in pages:
