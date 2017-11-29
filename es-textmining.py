@@ -24,7 +24,8 @@ def display_sentiment(pages):
         blob = TextBlob(a["content"])
         print blob.sentiment
 
-es = Elasticsearch([{'host': 'ec2-34-242-68-224.eu-west-1.compute.amazonaws.com', 'port': 9200}])
+settings = json.load(open('settings.json'))
+es = Elasticsearch([{'host': settings.hostname, 'port': settings.port}])
 
 doc = {
     'query': {

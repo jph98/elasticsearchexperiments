@@ -10,7 +10,8 @@ from elasticsearch import Elasticsearch
 
 DEBUG = False
 
-es = Elasticsearch([{'host': 'ec2-34-242-68-224.eu-west-1.compute.amazonaws.com', 'port': 9200}])
+settings = json.load(open('settings.json'))
+es = Elasticsearch([{'host': settings.hostname, 'port': settings.port}])
 
 def display_articles(pages):
     for a in pages:
