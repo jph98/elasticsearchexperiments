@@ -17,14 +17,14 @@ from textblob import TextBlob
 #
 # Textblob can perform a lot of different analysis using NLTK
 # http://textblob.readthedocs.io/en/dev/quickstart.html#quickstart
-# 
+#
 def display_sentiment(pages):
     for p in pages:
         a = p["_source"]
         blob = TextBlob(a["content"])
         print blob.sentiment
 
-es = Elasticsearch([{'host': 'localhost', 'port': 9200}])
+es = Elasticsearch([{'host': 'ec2-34-242-68-224.eu-west-1.compute.amazonaws.com', 'port': 9200}])
 
 doc = {
     'query': {

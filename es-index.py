@@ -8,7 +8,7 @@ from elasticsearch import Elasticsearch
 # Validate JSON with: https://jsonlint.com/
 # Example: https://github.com/ernestorx/es-swapi-test/blob/master/ES%20notebook.ipynb
 
-es = Elasticsearch([{'host': 'localhost', 'port': 9200}])
+es = Elasticsearch([{'host': 'ec2-34-242-68-224.eu-west-1.compute.amazonaws.com', 'port': 9200}])
 
 data = json.load(open('articles.json'))
 
