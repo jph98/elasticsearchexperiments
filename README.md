@@ -1,5 +1,10 @@
 # Elasticsearch Experiments
 
+Index stats: http://ec2-34-242-139-221.eu-west-1.compute.amazonaws.com/owen_articles/
+
+Term vectors:
+https://github.com/elastic/elasticsearch/issues/3114
+
 ## Basic search examples
 
 * Word: { "match": { "address": "mill" } }
@@ -122,4 +127,4 @@ n-gram tokenizer: https://www.elastic.co/guide/en/elasticsearch/reference/curren
 
 Sentiment Analysis: https://github.com/Jay-Wani/Elastic-twittersentiment-analysis
 
-Topic Modelling: 
+Topic Modelling:
